@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Générateur de mot de passe</title>
+
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/46249a0d76.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Générateur de mot de passe</h1>
+
+        <div class="settings">
+            <div class="setting">
+                <label>Nombre des caractères</label>
+                <input type="number" id="length" min='1' max="50" value='20' onKeyUp="if(this.value>50){this.value='50';}else if(this.value<0){this.value='0';}"/>
+            </div>
+            <div class="setting">
+                <label>Avec des lettres majuscules [ A B C ... X Y Z ]</label>
+                <input type="checkbox" id="uppercase" checked class="toggle"/>
+            </div>
+            <div class="setting">
+                <label>Avec des lettres minuscules [ a b c ... x y z ]</label>
+                <input type="checkbox" id="lowercase" checked class="toggle"/>
+            </div>
+            <div class="setting">
+                <label>Avec des chiffres [ 0 1 2 3 4 5 6 7 8 9 ]</label>
+                <input type="checkbox" id="numbers" checked class="toggle"/>
+            </div>
+            <div class="setting">
+                <label>Avec des caractères spéciaux [ ~ ! @ # $ ...]</label>
+                <input type="checkbox" id="symbols" checked class="toggle"/>
+            </div>
+        </div>
+        <button class="btn btn-large" id="generate">
+            Créer votre mot de passe
+        </button>
+
+        <div class="result-container">
+            <span id="result" ></span>
+            <button class="btn" id="clipboard">copier</button>
+        </div>
+        <p class="moi"><br><br><br><br>Développé par Atmane ABIDAR</p>
+
+    </div>
+</body>
+
+</html>
