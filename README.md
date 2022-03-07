@@ -1,1 +1,1 @@
-# Generateur-mot-de-passe.github.io
+https://atmane10.github.io/Generateur-mot-de-passe/
